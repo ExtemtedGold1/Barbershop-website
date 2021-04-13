@@ -8,6 +8,7 @@ body
     background-color: #222;
     width: 100%;
     font-family: "Source Sans Pro", sans-serif;
+    background-image: url('data:image/svg+xml,%3Csvg width="42" height="44" viewBox="0 0 42 44" xmlns="http://www.w3.org/2000/svg"%3E%3Cg id="Page-1" fill="none" fill-rule="evenodd"%3E%3Cg id="brick-wall" fill="%239C92AC" fill-opacity="0.4"%3E%3Cpath d="M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
 }
 header
 {
@@ -16,6 +17,10 @@ header
 img
 {
     width: 100%;
+}
+h2{
+    font-size: 2em;
+    margin-top: 20px;
 }
 .navbar
 {
@@ -75,29 +80,54 @@ img
 }
 section
 {
-    position: fixed;
+    width: 100%;
+    background-color: #eceff1;
+    color: black;
+}
+#onas
+{
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+#map
+{
+    width: 400px;
+    height: 250px;
+}
+.box
+{
+    width: 40%;
+    height: 300px;
+    background: yello;
+    margin: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.clear
+{
+    clear: both;
 }
 
 .img-container
 {
-    background-image: url('../img/brear.jpg');
+    background-image: url('https://images.unsplash.com/photo-1508358829795-0be2de8be018?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYxODMwODk0Mg&ixlib=rb-1.2.1&q=85');
     width: 100%;
-    height: 70%;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: fixed;
-    filter: sepia(600px), blur(200px);*/
+    padding-top: 300px;
+    padding-bottom: 300px;
+    filter: sepia(600px), blur(200px);
 }
 .inner-container
 {
     text-align: center;
-    position: fixed;
     width: 100%;
     color: white;
     height: auto;
-    margin-top: 200px;
 }
 .inner-container h1
 {
@@ -161,26 +191,43 @@ section
     .navbar-links.active{
         display: flex;
     }
+    .box{
+        width: 90%;
+    }
+    #map
+    {
+        width: 300px;
+    }
 }
-
+/* ------Under 920px wide---------  */
 @media only screen and (max-width:920px) {
-    .inner-container{
-        margin-top: 100px;
+    .img-container
+    {
+        padding-top: 150px;
+        padding-bottom: 150px;
     }
-
-    
+    #map
+    {
+        width: 300px;
+    }
 }
-
+/* ------Under 540px wide---------  */
 @media only screen and (max-width:540px) {
-    .inner-container{
-        margin-top: 90px;
+    .img-container
+    {
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
-    h1{
+
+    .inner-container h1{
         font-size: 4em;
     }
-    h2{
+    .inner-container h2{
         font-size: 1.3em;
         margin-top: 20px;
     }
-    
+    #map
+    {
+        width: 200px;
+    }
 }
