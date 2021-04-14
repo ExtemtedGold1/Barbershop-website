@@ -298,7 +298,7 @@ footer
 .socials li{
     margin: 0 10px;
 }
-.socials a{
+.socials a,.fotter-bottom a{
     text-decoration: none;
     color: #fff;
 }
@@ -306,7 +306,7 @@ footer
     font-size: 1.1rem;
     transition: color .4s ease;
 }
-.socials a:hover i
+.socials a:hover i,.fotter-bottom a:hover
 {
     color: red;
     filter: blur(1px);
