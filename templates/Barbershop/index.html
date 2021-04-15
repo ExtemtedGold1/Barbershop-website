@@ -1,14 +1,15 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-css/main.css">
-    <link rel="icon" href="img/icon-barber.png">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="icon" href="../../static/images/icon-barber.png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <script src="js/script.js" defer></script>
+    <script src="{% static 'js/script.js' %}" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <title>BarberShop - inny design</title>
 </head>
@@ -19,7 +20,7 @@
     
     <header>
         <div></div>
-       <nav class="navbar">
+       <nav class="navbar">F
             <div class="brand-title">
                 BarberShop-Website
             </div>
@@ -45,7 +46,7 @@
                 <div class="inner-container">
                     <h1>BARBER SHOP</h1>
                     <h2>Styllistyka Elegancja Profesionalna Obsługa</h2>
-                    <a class="btn" href="desing.html">Zrezerwuj Termin</a>
+                    <a class="btn" href="{% url 'booking' %}">Zrezerwuj Termin</a>
                 </div>
             </div>
         <section class="white">
@@ -79,10 +80,10 @@
         <section class="black">
             <div class="slider">
                 <figure>
-                    <img src="./img/brear.jpg" alt="brear">
-                    <img src="./img/frez.jpg" alt="frez">
-                    <img src="./img/fryzura.jpg" alt="fryzura">
-                    <img src="./img/salon.jpg" alt="salon">
+                    <img src="{% static 'images/brear.jpg' %}" alt="brear">
+                    <img src="{% static 'images/frez.jpg' %}" alt="frez">
+                    <img src="{% static 'images/fryzura.jpg' %}" alt="fryzura">
+                    <img src="{% static 'images/salon.jpg' %}" alt="salon">
                 </figure>
             </div>
         </section>
